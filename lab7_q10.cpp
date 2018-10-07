@@ -1,24 +1,28 @@
+ 
 //include the library
 #include<iostream>
 using namespace std;
+
 //declaration and definition of the recursive function
-int fibo(int i,int j=1,int s=1,int s1=0){
-	//loop terminator
-	if(j==i)
+int fibo(int a,int n=1,int s=1,int s1=0){
+	
+	if(n==a)
 	{	cout<<" The "<<i<<"th term of the fibonacci series is "<<s;}
 	else{   //fibonacci logic
 		int t=s;
 		s+=s1;
 		s1=t;
-		j++;
+		n++;
 		//recursive call
-		fibo(i,j,s,s1);
+		fibo(a,n,s,s1);
 		return 0;
 	}
 	return 0;
 }
+ 
 //main function
-int main(){
+int main()
+ {
 	//input from user
 	int a;	
 	cout<<"\n program to find n th term of the fibonacci series ";
@@ -27,4 +31,4 @@ int main(){
 	//calling recursive function
 	fibo(a);
 	return 0;	
-}
+ }
