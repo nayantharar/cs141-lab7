@@ -1,13 +1,21 @@
+
 //include the library
 #include<iostream>
 using namespace std;
+
 //declaration and definition of the recursive function 
-int rev(int i){
+int rev(int i)
+
+      {
 	//loop terminator
 	if(i==0)
-	{}
+	{
+         return 0;
+	}
+	 
 	//loop running
-	else{   //each time the ending term is printed which is found by % operator
+	else
+	{   //each time the ending term is printed which is found by % operator
 		cout<<i%10;
 		//number before the ending term taken before
 		i=(i/10);
