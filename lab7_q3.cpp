@@ -1,26 +1,32 @@
-//include the libraries
+//include the library
 #include<iostream>
 using namespace std;
+
 //declaration and definition of recursive function 
-	int printeven(int i,int j=2){
+	int printeven(int a,int n=2){
 	//loop terminator
-	if(j>i)
-	{}  
-	else{   //printing even numbers one by one
-		cout<<j<<endl;
-		j+=2;
-		//recursive call statement
-		printeven(i,j);
+	if(a<n)
+	 { return 0;
+         }  
+	else
+       {    //print even numbers
+		cout<< n <<endl;
+		n += 2;
+	    //recursive call statement
+		printeven(a,n);
 		return 0;
 	}
-	return 0;
+	
 }
-//main function
-int main(){
-	//input from user
+//write the main function
+int main()
+{
+	//enter the number till which you need to print
 	int a;	
-	cout<<"\n Range till even number is to be printed is ";
-	cin>>a;
+	cout<<" enter the number till which you need to print "<< endl;
+        cin>>a;
+        cout<<"the numbers are"<<endl; 
+	
 	//calling the recursive function
 	printeven(a);
 	return 0;	
