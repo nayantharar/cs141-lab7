@@ -1,31 +1,37 @@
-//include the library
+//include library
 #include<iostream>
 using namespace std;
+
 //declaration and definition of the recursive function 
-int printsum(int i,int j,int s)
-{ 	//loop terminator
-	if(j==(i+1)){cout<< "sum is "<<s;
-		return s;
+int printsum(int n,int a,int s)
+
+      {	
+	if(a>n) 
+        {
+          cout<< "sum is "<<s;
+		return 0;
 	}
- 	//loop running
-	else{   //the sum is calculated by adding incremented elements one by one
-		s+=j;
-		//incrementing
-		j++;
-		//rucursive call
-		 printsum(i,j,s);
+ 	
+
+	else
+        {   //the sum is calculated by adding incremented elements one by one
+		s+=a;
+		a++;
+	    // call the function
+		 printsum(n,a,s);
    		return 0;
 	}
 	
-}
-//main function
-int main(){
-	//input from user
+     }
+//write the main function
+int main()
+{
+	//ask the user for a number
 	int n;
 	cout<<"\n Finding sum of natural numbers from 1 to n";
 	cout<<"\n Enter n ";
 	cin>>n;
-	//calling the recursive function
+	//call the recursive function
 	printsum(n,1,0);
 	return 0;
 }
