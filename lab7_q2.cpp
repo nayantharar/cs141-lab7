@@ -1,28 +1,36 @@
 //include the library
 #include<iostream>
 using namespace std;
+
 //declaration and definition of the recursive function
-int printnum(int i,int j=1)
+int printnum(int n,int a)
+
 { 	//loop terminator
-	if(j>i){}
+	if(a>n)
+
+       {
+          return 0;
+       }
  	//loop running
-	else{
-		//printing the elements one by one and incrementing thereafter
-		cout<<j<<endl;
-		j++;
-		//recursive call statement
-		printnum(i,j);	
+	else
+       {
+	//printing the numbers in the increasing order
+		cout<<a<<endl;
+		a++;
+	//call function
+		printnum(n,a);	
 		return 0;
 	}
-	return 0;
+	
 }
-//main function
-int main(){
-	//input from user
+//write the main function
+int main()
+{
+	//ask the user for any number
 	int a;
-	cout<<"\n Enter the number till which you want to print ";
+	cout<<"\n Enter any number ";
 	cin>>a;
-	//calling the recursive function
-	printnum(a);
+	//call the function
+	printnum(a,1);
 	return 0;
 }
