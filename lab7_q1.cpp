@@ -1,18 +1,23 @@
-/header files
+//include library
 #include<iostream>
 using namespace std;
 //recursive function declaration and definition
-int power(int a,int b,int t=1,int s=1){
+int power(int a,int b,int s,int t)
+{
 	//terminating condition given by if statement
-	if(t>b)
-	{	cout<< a <<" to the power "<< b <<" = "<<s;}
+	if(b == 0)
+	{	cout<< a <<" to the power "<< t <<" = "<<s;
+         return 0 ;}
+
+
 	//loop running
 	else{
 		s*=a;
-		t++;
-		power(a,b,t,s);
+		b--;
+		power(a,b,s,t);
+                return 0;
 	}
-	return 0;
+	
 }
 //main function
 int main(){
@@ -22,6 +27,6 @@ int main(){
 	cout<<"\n Enter a,b ";
 	cin>>a>>b;
 	//calling the recursive function
-	power(a,b);
+	power(a,b,1,b);
 	return 0;	
 }
