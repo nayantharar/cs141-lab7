@@ -1,19 +1,32 @@
 //include the library
 #include<iostream>
 using namespace std;
+
 //declaration and definition of the recursive function 
-int sumdig(int j,int s){
-	//loop terminator
-	if(j==0)
-	{	cout<<" sum of digits = "<<s;
+
+int rev(int n,int a,int s)
+     {
+	
+	if(a==0)
+	{if(s==n)
+		{cout<<"\n Number is a palindrome";
 		return 0;}
-	else{	//summing digits from the last 
-		s+=(j%10);
-		j=(j/10);
+	 else
+		{cout<<"\n Number is not a palindrome";
+		return 0;}
+	}
+	
+	else
+	
+	{	
+		//reversing the number 
+		s=(s*10)+(a%10);
+		a=(a/10);
 		//recursive call
-		sumdig(j,s);
+		rev(n,a,s);
 		return 0;
 	}
+	
 }
 //main function
 int main(){
@@ -22,6 +35,6 @@ int main(){
 	cout<<"\n Enter any number ";
 	cin>>a;
 	//calling the recursive function
-	sumdig(a,0);
+	rev(a,a,0);
 	return 0;	
 }
