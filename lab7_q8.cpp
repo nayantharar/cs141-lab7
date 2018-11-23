@@ -2,7 +2,7 @@
 #include<iostream>
 using namespace std;
 
-//declaration and definition of the recursive function 
+// recursive function 
 int sumdig(int n,int s)
 {
 	
@@ -19,12 +19,14 @@ int sumdig(int n,int s)
 	}
 }
 //main function
-int main(){
+int main()
+{
 	//enter any number
 	int a;	
 	cout<<"\n Enter any number ";
 	cin>>a;
-	//calling the recursive function
+	
+	//call recursive function
 	sumdig(a,0);
 	return 0;	
 }
