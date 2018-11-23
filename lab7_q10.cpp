@@ -3,21 +3,28 @@
 #include<iostream>
 using namespace std;
 
-//declaration and definition of the recursive function
-int fibo(int a,int n=1,int s=1,int s1=0){
+// recursive function
+int fib(int n)
+{
 	
-	if(n==a)
-	{	cout<<" The "<<i<<"th term of the fibonacci series is "<<s;}
-	else{   //fibonacci logic
-		int t=s;
-		s+=s1;
-		s1=t;
-		n++;
-		//recursive call
-		fibo(a,n,s,s1);
-		return 0;
+	if(n==1)
+	{
+	return 1;
 	}
-	return 0;
+	
+	if(n==2)
+	{
+	return 1;
+	}
+	
+	
+	else
+	{
+	//fibonacci logic
+		return fib(n-1)+fib(n-2);
+	}
+		
+		
 }
  
 //main function
@@ -25,10 +32,11 @@ int main()
  {
 	//input from user
 	int a;	
-	cout<<"\n program to find n th term of the fibonacci series ";
-	cout<<"\n Enter n ";
+	cout<<" program to find n th term of the fibonacci series "<<endl;
 	cin>>a;
+	
+	
 	//calling recursive function
-	fibo(a);
+	fib(a);
 	return 0;	
  }
